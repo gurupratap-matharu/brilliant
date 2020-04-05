@@ -18,4 +18,16 @@ def contact(request):
 
 
 def login(request):
-    return render(request, 'main/login.html')
+    return render(request, 'main/login-page.html')
+
+
+def profile(request):
+    return render(request, 'main/profile-page.html')
+
+
+def landing(request):
+    return render(request, 'main/landing-page.html')
+
+
+def index(request):
+    return render(request, 'main/index.html')
