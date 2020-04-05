@@ -1,5 +1,21 @@
-from django.shortcuts import HttpResponse
+from django.shortcuts import render
 
 
-def home():
-    return HttpResponse('Hello Veer')
+def home(request):
+    return render(request, 'main/home.html')
+
+
+def about(request):
+    return render(request, 'main/about.html')
+
+
+def services(request):
+    return render(request, 'main/services.html')
+
+
+def contact(request):
+    return render(request, 'main/contact.html')
+
+
+def login(request):
+    return render(request, 'main/login.html')
