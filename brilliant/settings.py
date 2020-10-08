@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
 
     # Local
-    'main.apps.MainConfig',
+    'pages.apps.PagesConfig',
 ]
 
 MIDDLEWARE = [
