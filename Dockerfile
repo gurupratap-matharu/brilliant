@@ -1,15 +1,17 @@
-FROM python:3.8.0-alpine
+# Pull base image
+FROM python:3.7
 
-ENV PYTHONUNBUFFERED 1
+# set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
 
-RUN mkdir /code
-
+# set work dir
 WORKDIR /code
 
-COPY requirements.txt /code/
+# install requirements
+COPY Pipfile Pipfile.lock /code/
+RUN /usr/local/bin/python -m pip install --upgrade pip
+RUN pip install pipenv && pipenv install --system
 
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
-
+# copy project
 COPY . /code/
