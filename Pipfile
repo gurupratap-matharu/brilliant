@@ -12,6 +12,9 @@ django = "*"
 psycopg2 = "*"
 whitenoise = "*"
 gunicorn = "*"
+django-allauth = "*"
+django-extensions = "*"
+dj-database-url = "*"
 
 [requires]
 python_version = "3.8"
