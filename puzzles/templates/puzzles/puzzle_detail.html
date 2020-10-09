@@ -1,0 +1,8 @@
+<ul>
+    <li>{{ puzzle.title }}</li>
+    <li>{{ puzzle.description }}</li>
+    <img src="{{ puzzle.cover.url }}" alt="puzzle-cover">
+    {% for choice in puzzle.choices.all %}
+    <li>{{ choice }}</li>
+    {% endfor %}
+</ul>
