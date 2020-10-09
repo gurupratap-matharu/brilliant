@@ -26,6 +26,9 @@ class Puzzle(models.Model):
     def get_absolute_url(self):
         return reverse('puzzle_detail', args=[str(self.id)])
 
+    def get_correct_choices(self):
+        return self.choices.filter(is_correct=True)
+
 
 class Choice(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -36,3 +39,6 @@ class Choice(models.Model):
 
     def __str__(self):
         return self.text
+
+    def is_correct(self):
+        return self.is_correct
