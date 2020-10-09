@@ -15,6 +15,7 @@ gunicorn = "*"
 django-allauth = "*"
 django-extensions = "*"
 dj-database-url = "*"
+pillow = "*"
 
 [requires]
 python_version = "3.8"
