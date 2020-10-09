@@ -25,4 +25,5 @@ urlpatterns = [
 
     # Local apps
     path('', include('pages.urls')),
+    path('courses/', include('courses.urls')),
 ]
