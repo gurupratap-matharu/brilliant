@@ -1,8 +1,12 @@
 {% extends 'layouts/base.html' %}
 
-{% for puzzle in puzzle_list %}
-<div class="container bg-dark mt-5">
+{% block content %}
 
-    {{ puzzle.title }}
-</div>
-{% endfor %}
+<ul>
+    {% for puzzle in puzzle_list %}
+    <a href="{{ puzzle.get_absolute_url }}">
+        <li>{{ puzzle }}</li>
+    </a>
+    {% endfor %}
+</ul>
+{% endblock content %}
