@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from django.views.generic import DetailView
 
-# Create your views here.
+from puzzles.models import Puzzle
+
+
+class PuzzleDetail(DetailView):
+    model = Puzzle
+    context_object_name = 'puzzle'
+    template_name = 'puzzles/puzzle_detail.html'
