@@ -10,7 +10,10 @@ class ChoiceInline(admin.TabularInline):
 class PuzzleAdmin(admin.ModelAdmin):
     inlines = (ChoiceInline,)
     model = Puzzle
-    list_display = ('title', )
+    list_display = ('title', 'is_active', 'author',)
+    list_editable = ('is_active',)
+    list_filter = ('is_active', 'created_on',)
+    search_fields = ('title',)
 
 
 admin.site.register(Puzzle, PuzzleAdmin)

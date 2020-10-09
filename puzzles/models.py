@@ -10,6 +10,7 @@ class Puzzle(models.Model):
     title = models.CharField(max_length=200)
     intro = models.TextField('Introduction', blank=True)
     description = models.TextField('Description', blank=True)
+    question = models.TextField('Question', blank=True)
     is_active = models.BooleanField(default=True)
     cover = models.ImageField(upload_to='puzzles/', blank=True)
 
