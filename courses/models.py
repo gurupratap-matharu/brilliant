@@ -9,7 +9,10 @@ class Course(models.Model):
     title = models.CharField(max_length=200)
     subtitle = models.CharField(max_length=200)
     description = models.CharField(max_length=1000)
-    cover = models.ImageField(upload_to='covers/', blank=True)
+    cover = models.ImageField(upload_to='covers/')
+
+    created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.title
