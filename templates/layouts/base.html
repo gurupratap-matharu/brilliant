@@ -1,64 +1,7 @@
-{% load static %}
-<!doctype html>
-<html lang="en">
+{% extends 'layouts/base-fullscreen.html' %}
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="title" content="Puzzle">
-    <meta name="author" content="Gurupratap Matharu">
-    <meta name="description" content="Puzzle solving platform">
-    <meta name="keywords" content="puzzle, quiz, problem, thiking, brain, mind, challenge" />
-    <link rel="canonical" href="">
+{% block navigation %}
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="">
-    <meta property="og:title" content="Puzzle">
-    <meta property="og:description" content="A Puzzle solving platform">
-    <meta property="og:image" content="">
+{% include 'includes/navigation.html' %}
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="">
-    <meta property="twitter:title" content="Puzzle">
-    <meta property="twitter:description" content="Puzzle solving platform">
-    <meta property="twitter:image" content="">
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/png" href="{% static 'pages/img/favicon/favicon.ico' %}" />
-    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'pages/img/favicon/apple-touch-icon.png' %}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'pages/img/favicon/favicon-32x32.png' %}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'pages/img/favicon/favicon-16x16.png' %}">
-    <link rel="manifest" href="{% static 'pages/img/favicon/site.webmanifest' %}">
-    <link rel="mask-icon" href="{% static 'pages/img/favicon/safari-pinned-tab.svg' %}" color="#ffffff">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="theme-color" content="#ffffff">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <!-- Font Awesome Icons -->
-    <script src="https://kit.fontawesome.com/546230838a.js" crossorigin="anonymous"></script>
-    {% block stylesheets %}{% endblock stylesheets %}
-
-    <title>{% block title %}Puzzle{% endblock title %}</title>
-</head>
-
-<body>
-    {% include 'includes/navigation.html' %}
-    {% include 'includes/alert.html' %}
-    <div class="container-fluid">
-        {% block content %}{% endblock content %}
-    </div>
-
-    {% include 'includes/scripts.html' %}
-
-    <!-- Specific Page JS goes HERE  -->
-    {% block js %}{% endblock js %}
-
-</body>
-
-</html>
+{% endblock navigation %}

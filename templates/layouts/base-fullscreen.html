@@ -48,10 +48,14 @@
 </head>
 
 <body>
+    {% block navigation %}{% endblock navigation %}
+
+    {% include 'includes/alert.html' %}
 
     <div class="container-fluid">
-        {% include 'includes/alert.html' %}
+
         {% block content %}{% endblock content %}
+
     </div>
 
     {% include 'includes/scripts.html' %}
