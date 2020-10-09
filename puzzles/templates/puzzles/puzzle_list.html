@@ -1,0 +1,8 @@
+{% extends 'layouts/base.html' %}
+
+{% for puzzle in puzzle_list %}
+<div class="container bg-dark mt-5">
+
+    {{ puzzle.title }}
+</div>
+{% endfor %}
