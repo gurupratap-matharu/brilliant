@@ -10,7 +10,7 @@ class Puzzle(models.Model):
     title = models.CharField(max_length=200)
     description = models.CharField(max_length=1000)
 
-    cover = models.ImageField(upload_to='puzzles/')
+    cover = models.ImageField(upload_to='puzzles/', blank=True)
 
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
