@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'pages.apps.PagesConfig',
     'courses.apps.CoursesConfig',
+    'puzzles.apps.PuzzlesConfig',
 ]
 
 MIDDLEWARE = [
