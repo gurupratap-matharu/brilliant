@@ -17,6 +17,7 @@ django-extensions = "*"
 dj-database-url = "*"
 pillow = "*"
 factory-boy = "*"
+django-crispy-forms = "*"
 
 [requires]
 python_version = "3.8"
