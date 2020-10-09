@@ -16,6 +16,7 @@ django-allauth = "*"
 django-extensions = "*"
 dj-database-url = "*"
 pillow = "*"
+factory-boy = "*"
 
 [requires]
 python_version = "3.8"
