@@ -15,7 +15,7 @@ class Puzzle(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
 
-    author = models.ForeignKey(get_user_model(), on_delete=models.SET_NULL, related_name='puzzles')
+    author = models.ForeignKey(get_user_model(), null=True, on_delete=models.SET_NULL, related_name='puzzles')
 
     def __str__(self):
         return self.title
