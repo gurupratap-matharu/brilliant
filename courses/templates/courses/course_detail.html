@@ -1,0 +1,8 @@
+<ul>
+    <li>{{ course.title }}</li>
+    <li>{{ course.subtitle }}</li>
+    <li>{{ course.description }}</li>
+    {% if course.cover %}
+    <img src="{{ course.cover.url }}" alt="course cover">
+    {% endif %}
+</ul>
