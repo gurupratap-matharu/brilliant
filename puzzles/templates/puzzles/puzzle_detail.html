@@ -1,8 +1,22 @@
-<ul>
-    <li>{{ puzzle.title }}</li>
-    <li>{{ puzzle.description }}</li>
-    <img src="{{ puzzle.cover.url }}" alt="puzzle-cover">
-    {% for choice in puzzle.choices.all %}
-    <li>{{ choice }}</li>
-    {% endfor %}
-</ul>
+{% extends 'layouts/base.html' %}
+{% block content %}
+
+<div class="card w-50 mx-auto">
+    <img src="{{ puzzle.cover.url }}" class="card-img-top" alt="puzzle-cover">
+    <div class="card-body">
+        <h3 class="card-title">{{ puzzle.title }}</h3>
+        <p class="card-text">{{ puzzle.intro }}</p>
+        <p class="card-text">{{ puzzle.description }}</p>
+        <p class="card-text">{{ puzzle.question }}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        {% for choice in puzzle.choices.all %}
+        <li class="list-group-item">{{ choice }}</li>
+        {% endfor %}
+    </ul>
+    <a href="#" class="btn btn-primary">Submit</a>
+</div>
+
+
+
+{% endblock content %}
