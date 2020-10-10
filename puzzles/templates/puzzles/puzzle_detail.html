@@ -2,7 +2,9 @@
 {% block content %}
 
 <div class="card w-50 mx-auto">
+    {% if puzzle.cover %}
     <img src="{{ puzzle.cover.url }}" class="card-img-top" alt="puzzle-cover">
+    {% endif %}
     <div class="card-body">
         <h3 class="card-title">{{ puzzle.title }}</h3>
         <p class="card-text">{{ puzzle.intro }}</p>
