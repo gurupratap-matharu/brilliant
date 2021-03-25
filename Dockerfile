@@ -1,5 +1,5 @@
 # Pull base image
-FROM python:3.7
+FROM python:3-slim
 
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -10,8 +10,8 @@ WORKDIR /code
 
 # install requirements
 COPY Pipfile Pipfile.lock /code/
-RUN /usr/local/bin/python -m pip install --upgrade pip
-RUN pip install pipenv && pipenv install --system
+RUN /usr/local/bin/python -m pip install --upgrade pip && \
+    pip install pipenv && pipenv install --system
 
 # copy project
 COPY . /code/
