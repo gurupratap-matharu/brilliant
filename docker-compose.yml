@@ -3,6 +3,7 @@ version: '3.7'
 services:
     web:
         build: .
+        container_name: brilliant_web
         command: gunicorn brilliant.wsgi -b 0.0.0.0:8000 --log-level DEBUG
         env_file:
             - .env
@@ -10,11 +11,13 @@ services:
             - .:/code
         ports:
             - 8000:8000
+            - 4000:4000
         depends_on:
             - db
 
     db:
-        image: postgres:11
+        image: postgres:13.2-alpine
+        container_name: brilliant_db
         environment:
             POSTGRES_PASSWORD: postgres
         volumes:
