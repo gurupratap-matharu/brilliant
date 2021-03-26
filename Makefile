@@ -19,6 +19,12 @@ build:
 
 logs:
 	docker-compose logs -f web
+
+buildlogs:
+	docker-compose down
+	docker-compose up -d --build
+	docker-compose logs -f web
+
 shell_plus:
 	docker-compose exec web python manage.py shell_plus
 shell:
