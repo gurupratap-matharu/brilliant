@@ -113,7 +113,7 @@ DATABASES = {
         'NAME': os.environ.get('DATABASE_NAME'),
         'USER': os.environ.get('DATABASE_USER'),
         'PASSWORD': os.environ.get('DATABASE_PASSWORD'),
-        'HOST': 'db',
+        'HOST': os.environ.get('DATABASE_HOST', default='localhost'),
         'PORT': 5432
     }
 }
@@ -202,7 +202,6 @@ DEFAULT_FROM_EMAIL = 'admin@market.com'
 RECIPIENT_LIST = ['gurupratap.matharu@gmail.com']
 
 if not DEBUG:
-    print('VEER DEBUG IS FALSE!!!')
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
